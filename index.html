@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081225">
+<title>LUNA BASE | Junior Astronaut Mission Trainer</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="brand">◉ LUNA<span>BASE</span><small>JUNIOR ASTRONAUT MISSION TRAINER</small></div><div class="live"><i></i> EDUCATIONAL SIMULATION</div></header>
+<main>
+<section id="welcome" class="welcome">
+<div><p class="eyebrow">MISSION CONTROL / TRAINING DIVISION</p><h1>Build a base.<br><em>Protect your crew.</em></h1><p class="lead">Lead a lunar or Martian outpost for seven simulated days. Balance life support, water, food, energy and radiation protection while responding to space-weather information.</p><div class="chips"><span>7 MISSION DAYS</span><span>5 RESOURCES</span><span>REAL NASA SPACE-WEATHER FEED</span></div></div>
+<div class="launch panel"><div class="planet">◌</div><p class="eyebrow">MISSION BRIEFING</p><label for="name">ASTRONAUT CALLSIGN</label><input id="name" maxlength="20" placeholder="Commander Nova"><label for="base">SELECT OUTPOST</label><select id="base"><option>Moon</option><option>Mars</option></select><button id="start" class="btn">BEGIN MISSION →</button><p class="disclaimer">Training game only. Resource values and hazard effects are simplified assumptions, not operational NASA guidance.</p></div>
+</section>
+<section id="game" class="hidden">
+<div class="heading"><div><p class="eyebrow">COMMAND CENTER / <span id="baseName">LUNAR OUTPOST</span></p><h2>Commander <span id="commander">Nova</span></h2><p class="muted">Keep every critical system above zero to complete the mission.</p></div><div class="day panel"><small>MISSION DAY</small><strong id="day">01 / 07</strong><div class="track"><div id="progress"></div></div></div></div>
+<div class="resources" id="resources"></div>
+<div class="columns">
+<section class="panel operations"><p class="eyebrow">DAILY OPERATIONS</p><h3>Choose one priority</h3><p class="muted">Your choice improves one system. Daily crew needs consume supplies after each turn.</p><div id="actions" class="actions"></div><button id="endDay" class="btn wide">CONFIRM ACTION & END DAY →</button></section>
+<aside class="side">
+<section class="panel weather"><div class="line"><p class="eyebrow">NASA SPACE-WEATHER DATA</p><span id="apiState" class="tag">NOT LOADED</span></div><h3 id="weatherTitle">Check recent solar activity</h3><p id="weatherText" class="muted">Fetch recent solar flare and coronal mass ejection (CME) records from NASA's DONKI database. This feed informs the learning scenario; it is not a Moon/Mars radiation forecast.</p><button id="fetchWeather" class="secondary">FETCH NASA DONKI DATA ↗</button><p class="source"><a href="https://ccmc.gsfc.nasa.gov/tools/DONKI/" target="_blank" rel="noopener">NASA CCMC DONKI portal</a> · <a href="https://api.nasa.gov/" target="_blank" rel="noopener">API documentation</a></p></section>
+<section class="panel event"><p class="eyebrow">MISSION CONTROL</p><h3 id="eventTitle">All systems nominal</h3><p id="eventText" class="muted">Choose a daily priority to begin.</p><div class="log" id="log">Mission initialized. Awaiting commander.</div></section>
+</aside></div>
+<p class="footnote">NASA data is shown as reported by DONKI. Gameplay consequences are fictional, simplified educational scenarios and should not be interpreted as site-specific space-weather predictions.</p>
+</section>
+<section id="result" class="hidden result panel"><p class="eyebrow">MISSION DEBRIEF</p><div class="medal" id="medal">✦</div><h2 id="resultTitle">Mission complete</h2><p id="resultText" class="muted"></p><div class="score"><div><strong id="days">7</strong><small>DAYS SURVIVED</small></div><div><strong id="points">0</strong><small>MISSION POINTS</small></div><div><strong id="outpost">MOON</strong><small>OUTPOST</small></div></div><button class="btn" id="restart">START NEW MISSION ↻</button></section>
+</main>
+<footer><span>LUNA BASE · JUNIOR ASTRONAUT MISSION TRAINER</span><span>Independent student project · Not an official NASA product or endorsement</span></footer>
+<script src="app.js"></script>
+</body></html>

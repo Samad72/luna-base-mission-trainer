@@ -1,0 +1,2 @@
+30-second demo narration:
+“Welcome to LUNA BASE, a junior astronaut mission trainer. Choose a Moon or Mars outpost and lead your crew for seven simulated days. Each day, balance oxygen, water, food, power, and radiation protection by choosing a priority. The game shows how decisions create trade-offs and how a critical shortage can end a mission. We also retrieve recent solar-flare and coronal-mass-ejection records from NASA DONKI to introduce real space-weather context. The game effects are simplified learning scenarios, not real mission forecasts.”
